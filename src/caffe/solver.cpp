@@ -11,6 +11,11 @@
 #include "caffe/util/math_functions.hpp"
 #include "caffe/util/upgrade_proto.hpp"
 
+// port for Win32
+#ifdef _MSC_VER
+#define snprintf sprintf_s
+#endif
+
 namespace caffe {
 
 template <typename Dtype>
@@ -328,7 +333,9 @@ void Solver<Dtype>::Snapshot() {
   string model_filename, snapshot_filename;
   const int kBufferSize = 20;
   char iter_str_buffer[kBufferSize];
+
   snprintf(iter_str_buffer, kBufferSize, "_iter_%d", iter_);
+
   filename += iter_str_buffer;
   model_filename = filename + ".caffemodel";
   LOG(INFO) << "Snapshotting to " << model_filename;

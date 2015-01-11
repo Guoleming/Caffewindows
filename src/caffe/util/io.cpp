@@ -18,6 +18,12 @@
 #include "caffe/proto/caffe.pb.h"
 #include "caffe/util/io.hpp"
 
+// port for Win32
+#ifdef _MSC_VER
+#define open _open
+#define close _close
+#endif
+
 namespace caffe {
 
 using google::protobuf::io::FileInputStream;
