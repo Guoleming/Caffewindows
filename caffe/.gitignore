@@ -6,6 +6,8 @@ Release
 x64
 *.sdf
 *.pdb
+*.opensdf
+*.suo
 
 # Compiled Object files
 *.slo
