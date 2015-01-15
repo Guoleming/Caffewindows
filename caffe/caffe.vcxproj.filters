@@ -54,39 +54,6 @@
     <ClCompile Include="..\src\caffe\syncedmem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\caffe\util\math_functions.cpp">
-      <Filter>Source Files\util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\caffe\util\upgrade_proto.cpp">
-      <Filter>Source Files\util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\caffe\util\benchmark.cpp">
-      <Filter>Source Files\util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\caffe\util\im2col.cpp">
-      <Filter>Source Files\util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\caffe\util\insert_splits.cpp">
-      <Filter>Source Files\util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\caffe\util\io.cpp">
-      <Filter>Source Files\util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\caffe\proto\caffe_pretty_print.pb.cc">
-      <Filter>Source Files\proto</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\caffe\proto\caffe.pb.cc">
-      <Filter>Source Files\proto</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\caffe\layers\base_data_layer.cpp">
-      <Filter>Source Files\layers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\caffe\layers\bnll_layer.cpp">
-      <Filter>Source Files\layers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\caffe\layers\concat_layer.cpp">
-      <Filter>Source Files\layers</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\caffe\layers\contrastive_loss_layer.cpp">
       <Filter>Source Files\layers</Filter>
     </ClCompile>
@@ -124,9 +91,6 @@
       <Filter>Source Files\layers</Filter>
     </ClCompile>
     <ClCompile Include="..\src\caffe\layers\euclidean_loss_layer.cpp">
-      <Filter>Source Files\layers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\caffe\layers\exp_layer.cpp">
       <Filter>Source Files\layers</Filter>
     </ClCompile>
     <ClCompile Include="..\src\caffe\layers\flatten_layer.cpp">
@@ -219,20 +183,41 @@
     <ClCompile Include="..\src\caffe\layers\argmax_layer.cpp">
       <Filter>Source Files\layers</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\caffe\layers\base_data_layer.cpp">
+      <Filter>Source Files\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\caffe\layers\bnll_layer.cpp">
+      <Filter>Source Files\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\caffe\layers\concat_layer.cpp">
+      <Filter>Source Files\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\caffe\util\math_functions.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\caffe\util\upgrade_proto.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\caffe\util\benchmark.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\caffe\util\im2col.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\caffe\util\insert_splits.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\caffe\util\io.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\caffe\proto\caffe_pretty_print.pb.cc">
+      <Filter>Source Files\proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\caffe\proto\caffe.pb.cc">
+      <Filter>Source Files\proto</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CudaCompile Include="..\src\caffe\util\math_functions.cu">
-      <Filter>Source Files\util</Filter>
-    </CudaCompile>
-    <CudaCompile Include="..\src\caffe\util\im2col.cu">
-      <Filter>Source Files\util</Filter>
-    </CudaCompile>
-    <CudaCompile Include="..\src\caffe\layers\base_data_layer.cu">
-      <Filter>Source Files\layers</Filter>
-    </CudaCompile>
-    <CudaCompile Include="..\src\caffe\layers\bnll_layer.cu">
-      <Filter>Source Files\layers</Filter>
-    </CudaCompile>
     <CudaCompile Include="..\src\caffe\layers\concat_layer.cu">
       <Filter>Source Files\layers</Filter>
     </CudaCompile>
@@ -267,9 +252,6 @@
       <Filter>Source Files\layers</Filter>
     </CudaCompile>
     <CudaCompile Include="..\src\caffe\layers\euclidean_loss_layer.cu">
-      <Filter>Source Files\layers</Filter>
-    </CudaCompile>
-    <CudaCompile Include="..\src\caffe\layers\exp_layer.cu">
       <Filter>Source Files\layers</Filter>
     </CudaCompile>
     <CudaCompile Include="..\src\caffe\layers\flatten_layer.cu">
@@ -317,6 +299,9 @@
     <CudaCompile Include="..\src\caffe\layers\softmax_layer.cu">
       <Filter>Source Files\layers</Filter>
     </CudaCompile>
+    <CudaCompile Include="..\src\caffe\layers\softmax_loss_layer.cu">
+      <Filter>Source Files\layers</Filter>
+    </CudaCompile>
     <CudaCompile Include="..\src\caffe\layers\split_layer.cu">
       <Filter>Source Files\layers</Filter>
     </CudaCompile>
@@ -328,6 +313,18 @@
     </CudaCompile>
     <CudaCompile Include="..\src\caffe\layers\absval_layer.cu">
       <Filter>Source Files\layers</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\src\caffe\layers\base_data_layer.cu">
+      <Filter>Source Files\layers</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\src\caffe\layers\bnll_layer.cu">
+      <Filter>Source Files\layers</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\src\caffe\util\math_functions.cu">
+      <Filter>Source Files\util</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\src\caffe\util\im2col.cu">
+      <Filter>Source Files\util</Filter>
     </CudaCompile>
   </ItemGroup>
   <ItemGroup>

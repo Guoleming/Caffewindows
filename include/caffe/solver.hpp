@@ -26,15 +26,16 @@ class Solver {
   // in a non-zero iter number to resume training for a pre-trained net.
   virtual void Solve(const char* resume_file = NULL);
   inline void Solve(const string resume_file) { Solve(resume_file.c_str()); }
-  void Step(int iters);
   virtual ~Solver() {}
   inline shared_ptr<Net<Dtype> > net() { return net_; }
   inline const vector<shared_ptr<Net<Dtype> > >& test_nets() {
     return test_nets_;
   }
-  int iter() { return iter_; }
 
  protected:
+  // PreSolve is run before any solving iteration starts, allowing one to
+  // put up some scaffold.
+  virtual void PreSolve() {}
   // Get the update value for the current iteration.
   virtual void ComputeUpdateValue() = 0;
   // The Solver::Snapshot function implements the basic snapshotting utility
@@ -71,14 +72,14 @@ template <typename Dtype>
 class SGDSolver : public Solver<Dtype> {
  public:
   explicit SGDSolver(const SolverParameter& param)
-      : Solver<Dtype>(param) { PreSolve(); }
+      : Solver<Dtype>(param) {}
   explicit SGDSolver(const string& param_file)
-      : Solver<Dtype>(param_file) { PreSolve(); }
+      : Solver<Dtype>(param_file) {}
 
   const vector<shared_ptr<Blob<Dtype> > >& history() { return history_; }
 
  protected:
-  void PreSolve();
+  virtual void PreSolve();
   Dtype GetLearningRate();
   virtual void ComputeUpdateValue();
   virtual void SnapshotSolverState(SolverState * state);
