@@ -116,7 +116,7 @@
       <Command>../scripts/GeneratePB.bat</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>rename "../bin/caffe.lib" "../bin/caffed.lib"</Command>
+      <Command>copy /y "..\bin\caffe.lib" "..\bin\caffed.lib"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -186,6 +186,7 @@
     <ClCompile Include="..\src\caffe\layers\dummy_data_layer.cpp" />
     <ClCompile Include="..\src\caffe\layers\eltwise_layer.cpp" />
     <ClCompile Include="..\src\caffe\layers\euclidean_loss_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\exp_layer.cpp" />
     <ClCompile Include="..\src\caffe\layers\flatten_layer.cpp" />
     <ClCompile Include="..\src\caffe\layers\hdf5_data_layer.cpp" />
     <ClCompile Include="..\src\caffe\layers\hdf5_output_layer.cpp" />
@@ -242,6 +243,7 @@
     <CudaCompile Include="..\src\caffe\layers\dropout_layer.cu" />
     <CudaCompile Include="..\src\caffe\layers\eltwise_layer.cu" />
     <CudaCompile Include="..\src\caffe\layers\euclidean_loss_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\exp_layer.cu" />
     <CudaCompile Include="..\src\caffe\layers\flatten_layer.cu" />
     <CudaCompile Include="..\src\caffe\layers\hdf5_data_layer.cu" />
     <CudaCompile Include="..\src\caffe\layers\hdf5_output_layer.cu" />
@@ -257,7 +259,6 @@
     <CudaCompile Include="..\src\caffe\layers\silence_layer.cu" />
     <CudaCompile Include="..\src\caffe\layers\slice_layer.cu" />
     <CudaCompile Include="..\src\caffe\layers\softmax_layer.cu" />
-    <CudaCompile Include="..\src\caffe\layers\softmax_loss_layer.cu" />
     <CudaCompile Include="..\src\caffe\layers\split_layer.cu" />
     <CudaCompile Include="..\src\caffe\layers\tanh_layer.cu" />
     <CudaCompile Include="..\src\caffe\layers\threshold_layer.cu" />
