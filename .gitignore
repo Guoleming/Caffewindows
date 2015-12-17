@@ -84,3 +84,4 @@ docs/dev
 *.gen.cmake
 *.suo
 caffe/caffe.v12.suo
+*.deps
